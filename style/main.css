@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.btn {
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+}
+
+.btn--mod-blue {
+  background-color: #5457b6;
+  border: 1px solid #67727e;
+}
+
+.tag {
+  color: #5457b6;
+  font-weight: 500;
+}
+
+.comment {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  padding-top: 25px;
+}
+
+.comment__wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5fr)[2];
+      grid-template-columns: repeat(2, 0.5fr);
+  -ms-grid-rows: .5fr 40px;
+      grid-template-rows: .5fr 40px;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.comment__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.comment__profile__img {
+  width: 35px;
+  height: 35px;
+  border-radius: 25%;
+}
+
+.comment__profile__username--you {
+  background-color: #5457b6;
+  font-size: .8rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.comment__profile__timestamp {
+  color: #67727e;
+}
+
+.comment__message {
+  color: #67727e;
+  font-size: 1rem;
+}
+
+.comment__action {
+  background-color: #eaecf1;
+  width: 90px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.comment__action__score {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5457b6;
+}
+
+.comment__action__downvote {
+  padding-bottom: 5px;
+}
+
+.comment__reply {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.comment__reply__btn {
+  font-weight: 700;
+  color: #5457b6;
+}
+
+.replied {
+  padding-left: 15px;
+  border-left: 3px solid #eaecf1;
+}
+
+.user {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (0.5fr)[2];
+      grid-template-columns: repeat(2, 0.5fr);
+}
+
+.user__img__wrapper {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.user__img {
+  width: 40px;
+  height: 40px;
+}
+
+.user__input {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/span 2;
+  border: 2px solid #eaecf1;
+  border-radius: 10px;
+  padding: 10px;
+  height: 100px;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  resize: none;
+}
+
+.user__cta {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 100px;
+  margin-right: 0;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+/*# sourceMappingURL=main.css.map */

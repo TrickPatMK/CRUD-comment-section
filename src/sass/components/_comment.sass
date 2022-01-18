@@ -1,0 +1,75 @@
+.comment
+
+  &__wrapper
+    background-color: $cn-white
+    border-radius: 10px
+    padding: 15px
+    // display: flex
+    // flex-direction: column
+    margin-top: 15px
+    display: grid
+    grid-template-columns: repeat(2, .5fr)
+    grid-template-rows: .5fr 40px
+    gap: 10px
+    align-items: center
+
+  &__text
+    grid-column: 1 / span 2
+
+  &__profile
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 15px
+    margin-bottom: 15px
+
+    &__img
+      width: 35px
+      height: 35px
+      border-radius: 25%
+
+    &__username
+      &--you
+        background-color: $cp-moderate-blue
+        font-size: .8rem
+        font-weight: 500
+        color: $cn-white
+        border-radius: 3px
+        padding: 3px 5px
+
+    &__timestamp
+      color: $cn-grayish-blue
+
+  &__message
+    color: $cn-grayish-blue
+    font-size: 1rem
+
+  &__action
+    background-color: $cn-light-gray
+    width: 90px
+    padding: 5px 10px
+    border-radius: 10px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    gap: 5px
+
+    &__score
+      font-size: 1rem
+      font-weight: 700
+      color: $cp-moderate-blue
+
+    &__downvote
+      padding-bottom: 5px
+
+  &__reply
+    justify-self: end
+
+    &__btn
+      font-weight: 700
+      color: $cp-moderate-blue
+
+.replied
+  padding-left: 15px
+  border-left: 3px solid $cn-light-gray

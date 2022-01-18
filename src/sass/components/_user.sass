@@ -1,0 +1,36 @@
+.user
+  background-color: $cn-white
+  width: 100%
+  padding: 20px
+  margin-top: 15px
+  border-radius: 10px
+  display: grid
+  justify-content: center
+  align-items: end
+  grid-template-rows: repeat(2, 1fr)
+  grid-template-columns: repeat(2, .5fr)
+
+  &__img__wrapper
+    order: 1
+
+  &__img
+    width: 40px
+    height: 40px
+
+  &__input
+    order: 0
+    grid-column: 1/span 2
+    border: 2px solid $cn-light-gray
+    border-radius: 10px
+    padding: 10px
+    height: 100px
+    font-size: 1rem
+    font-family: $font
+    font-weight: 400
+    resize: none
+
+  &__cta
+    order: 2
+    width: 100px
+    margin-right: 0
+    justify-self: end
