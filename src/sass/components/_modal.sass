@@ -1,0 +1,37 @@
+.modal
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: transparentize($cn-grayish-blue, .5)
+  z-index: 9
+
+  &__wrapper
+    background-color: $cn-white
+    max-width: 90%
+    margin: 45% auto
+    padding: 25px
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    row-gap: 15px
+
+  &__header
+    font-size: 1.2rem
+    color: $cn-dark-blue
+
+  &__text
+    color: $cn-grayish-blue
+    line-height: 1.5rem
+    font-size: .9rem
+
+  &__cta
+    display: grid
+    grid-template-columns: repeat(2, .5fr)
+    column-gap: 10px
+
+    &__decline, &__accept
+      font-weight: 500
+      padding: 15px 10px

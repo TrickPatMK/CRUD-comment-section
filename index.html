@@ -31,6 +31,23 @@
     <!-- Pull dynamic content from the data.json file -->
 
     <div id="root" role="main">
+      <div class="modal" id="modal">
+        <div class="modal__wrapper">
+          <h2 class="modal__header font-500">Delete comment</h2>
+          <div class="modal__text">
+            Are you sure want to delete this comment? This will remove the
+            comment and can't be undone.
+          </div>
+          <div class="modal__cta">
+            <button class="btn btn--grayBlue modal__cta__decline">
+              No, cancel
+            </button>
+            <button class="btn btn--softRed modal__cta__accept">
+              Yes, delete
+            </button>
+          </div>
+        </div>
+      </div>
       <section id="comment" class="container comment">
         <!-- comment 1 -->
         <div class="comment__wrapper">
