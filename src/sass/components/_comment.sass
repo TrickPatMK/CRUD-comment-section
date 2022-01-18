@@ -1,3 +1,15 @@
+%cta-hover
+  cursor: pointer
+
+%cta-svg-hover
+  fill: $cp-light-grayish-blue
+
+%edit-btn
+  display: flex
+  flex-direction: row
+  align-items: start
+  gap: 5px
+
 .comment
 
   &__wrapper
@@ -25,6 +37,7 @@
       border-radius: 25%
 
     &__username
+      color: $cn-dark-blue
       &--you
         background-color: $cp-moderate-blue
         font-size: .8rem
@@ -43,16 +56,27 @@
     grid-area: message
 
   &__action
-    background-color: $cn-light-gray
+    background-color: $cn-very-light-gray
     width: 90px
-    padding: 5px 10px
+    padding: 10px
     border-radius: 10px
+    align-self: self-start
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
-    gap: 5px
+    gap: 10px
     grid-area: action
+
+    &__upvote, &__downvote
+      & svg
+        fill: $cp-light-grayish-blue
+
+      &:hover
+        cursor: pointer
+
+        & svg
+          fill: $cp-moderate-blue
 
     &__score
       font-size: 1rem
@@ -67,21 +91,54 @@
     grid-area: reply-edit
 
     &__btn
-      font-weight: 700
+      @extend %edit-btn
+      font-weight: 500
       color: $cp-moderate-blue
+
+      &__svg
+        fill: $cp-moderate-blue
+
+      &:hover
+        @extend %cta-hover
+        color: $cp-light-grayish-blue
+
+      &:hover &__svg
+        @extend %cta-svg-hover
 
   &__edit
     justify-self: end
     grid-area: reply-edit
+    display: flex
+    flex-direction: row
+    gap: 15px
 
     &__delete
+      @extend %edit-btn
       color: $cp-soft-red
-      word-spacing: 5px
-      margin-right: 5px
+
+      &__svg
+        fill: $cp-soft-red
+
+      &:hover
+        @extend %cta-hover
+        color: $cp-pale-red
+
+      &:hover &__svg
+        fill: $cp-pale-red
 
     &__btn
+      @extend %edit-btn
       color: $cp-moderate-blue
-      word-spacing: 5px
+
+      &__svg
+        fill: $cp-moderate-blue
+
+      &:hover
+        @extend %cta-hover
+        color: $cp-light-grayish-blue
+
+      &:hover &__svg
+        @extend %cta-svg-hover
 
 .replied
   padding-left: 15px

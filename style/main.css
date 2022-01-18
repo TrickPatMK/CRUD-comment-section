@@ -35,6 +35,11 @@ p {
   border: 1px solid #67727e;
 }
 
+.btn--mod-blue:active {
+  background-color: #c3c4ef;
+  border-color: #f5f6fa;
+}
+
 .tag {
   color: #5457b6;
 }
@@ -56,6 +61,28 @@ p {
   display: -ms-grid;
   display: grid;
   padding-top: 25px;
+}
+
+.comment__reply__btn:hover, .comment__edit__delete:hover, .comment__edit__btn:hover {
+  cursor: pointer;
+}
+
+.comment__reply__btn:hover .comment__reply__btn__svg, .comment__edit__btn:hover .comment__edit__btn__svg {
+  fill: #c3c4ef;
+}
+
+.comment__reply__btn, .comment__edit__delete, .comment__edit__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 5px;
 }
 
 .comment__wrapper {
@@ -100,6 +127,10 @@ p {
   border-radius: 25%;
 }
 
+.comment__profile__username {
+  color: #324152;
+}
+
 .comment__profile__username--you {
   background-color: #5457b6;
   font-size: .8rem;
@@ -124,10 +155,12 @@ p {
 }
 
 .comment__action {
-  background-color: #eaecf1;
+  background-color: #f5f6fa;
   width: 90px;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 10px;
+  -ms-flex-item-align: self-start;
+      align-self: self-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,10 +174,22 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5px;
+  gap: 10px;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: action;
+}
+
+.comment__action__upvote svg, .comment__action__downvote svg {
+  fill: #c3c4ef;
+}
+
+.comment__action__upvote:hover, .comment__action__downvote:hover {
+  cursor: pointer;
+}
+
+.comment__action__upvote:hover svg, .comment__action__downvote:hover svg {
+  fill: #5457b6;
 }
 
 .comment__action__score {
@@ -166,27 +211,59 @@ p {
 }
 
 .comment__reply__btn {
-  font-weight: 700;
+  font-weight: 500;
   color: #5457b6;
 }
 
+.comment__reply__btn__svg {
+  fill: #5457b6;
+}
+
+.comment__reply__btn:hover {
+  color: #c3c4ef;
+}
+
 .comment__edit {
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: reply-edit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
 }
 
 .comment__edit__delete {
   color: #ed6468;
-  word-spacing: 5px;
-  margin-right: 5px;
+}
+
+.comment__edit__delete__svg {
+  fill: #ed6468;
+}
+
+.comment__edit__delete:hover {
+  color: #ffb8bb;
+}
+
+.comment__edit__delete:hover .comment__edit__delete__svg {
+  fill: #ffb8bb;
 }
 
 .comment__edit__btn {
   color: #5457b6;
-  word-spacing: 5px;
+}
+
+.comment__edit__btn__svg {
+  fill: #5457b6;
+}
+
+.comment__edit__btn:hover {
+  color: #c3c4ef;
 }
 
 .replied {
@@ -242,6 +319,10 @@ p {
   resize: none;
 }
 
+.user__input:focus-visible {
+  outline: 1px solid #5457b6;
+}
+
 .user__cta {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -262,9 +343,6 @@ p {
     -ms-grid-rows: 50px 1fr;
         grid-template-rows: 50px 1fr;
         grid-template-areas: 'action profile reply-edit' 'action message message';
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .comment__profile {
     -ms-grid-row: 1;
