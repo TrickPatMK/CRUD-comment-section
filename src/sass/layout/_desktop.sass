@@ -1,6 +1,42 @@
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 1024px)
   .container
     max-width: 70%
 
   .comment
     &__wrapper
+      grid-template-columns: 60px 1fr 150px
+      grid-template-rows: 50px 1fr
+      grid-template-areas: 'action profile reply-edit' 'action message message'
+      align-items: center
+
+    &__profile
+      grid-area: profile
+
+    &__message
+      grid-area: message
+
+    &__action
+      flex-direction: column
+      order: 1
+      grid-area: action
+      justify-self: center
+      width: 40px
+
+    &__reply
+      grid-area: reply-edit
+
+    &__edit
+      grid-area: reply-edit
+
+  .replied
+    margin-left: 40px
+    padding-left: 40px
+
+  .user
+    grid-template-rows: 1fr
+    grid-template-columns: 60px 1fr 120px
+    align-items: start
+
+    &__input
+      grid-column: 2
+      order: 2

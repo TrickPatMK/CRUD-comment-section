@@ -4,24 +4,20 @@
     background-color: $cn-white
     border-radius: 10px
     padding: 15px
-    // display: flex
-    // flex-direction: column
     margin-top: 15px
     display: grid
-    grid-template-columns: repeat(2, .5fr)
-    grid-template-rows: .5fr 40px
+    grid-template-columns: .5fr .5fr
+    grid-template-rows: 50px .5fr 40px
+    grid-template-areas: 'profile profile' 'message message' 'action reply-edit'
     gap: 10px
     align-items: center
-
-  &__text
-    grid-column: 1 / span 2
 
   &__profile
     display: flex
     flex-direction: row
     align-items: center
     gap: 15px
-    margin-bottom: 15px
+    grid-area: profile
 
     &__img
       width: 35px
@@ -44,6 +40,7 @@
     color: $cn-grayish-blue
     font-size: 1rem
     line-height: 1.5rem
+    grid-area: message
 
   &__action
     background-color: $cn-light-gray
@@ -55,6 +52,7 @@
     justify-content: space-between
     align-items: center
     gap: 5px
+    grid-area: action
 
     &__score
       font-size: 1rem
@@ -66,6 +64,7 @@
 
   &__reply
     justify-self: end
+    grid-area: reply-edit
 
     &__btn
       font-weight: 700
@@ -73,13 +72,17 @@
 
   &__edit
     justify-self: end
+    grid-area: reply-edit
+
     &__delete
       color: $cp-soft-red
       word-spacing: 5px
       margin-right: 5px
+
     &__btn
       color: $cp-moderate-blue
       word-spacing: 5px
+
 .replied
   padding-left: 15px
   border-left: 3px solid $cn-light-gray
