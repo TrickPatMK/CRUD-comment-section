@@ -14,3 +14,10 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# vscode local preference
+.vscode
+
+# tsconfig
+tsconfig.json
+node_modules
