@@ -21,3 +21,4 @@
 # tsconfig
 tsconfig.json
 node_modules
+dist

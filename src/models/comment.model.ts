@@ -4,9 +4,12 @@
  * Manage the sample data of the app
  */
 
+import { nanoid } from "nanoid"
+
 export interface CommentDataInterface {
-  commentId: number,
+  commentId?: number | string,
   username: string,
+  createAt?: string
   imagePath: string,
   message: string,
   score: number,
@@ -16,48 +19,35 @@ export interface CommentDataInterface {
 }
 
 export class CommentData {
-  public commentId: number
+  public commentId: number | string
   public username: string
-  public createAt: object[]
+  public createAt?: string
   public imagePath: string
   public message: string
   public score: number
   public replies: Array<object>
   public isUser?: boolean
-  constructor({ commentId, username, imagePath, message, score, replies }: CommentDataInterface = {
-    commentId: 0,
+  constructor({ commentId, username, createAt, imagePath, message, score, replies, isUser }: CommentDataInterface = {
+    commentId: null,
     username: "",
     imagePath: "",
     message: "",
     score: 0,
+    isUser: false
   }) {
-    this.commentId = commentId
+    this.commentId = commentId || nanoid()
     this.username = username
-    this.createAt = this._createAt(); // destructurable
+    this.createAt = createAt || this._createAt();
     this.imagePath = imagePath
     this.message = message
     this.score = score
     this.replies = replies
-    this.isUser = false
+    this.isUser = isUser
   }
 
-  private _createAt(): Array<object> {
-    const currentDate = new Date()
-    return [
-      {
-        time: {
-          hours: currentDate.getHours(),
-          minutes: currentDate.getMinutes(),
-          seconds: currentDate.getSeconds()
-        }
-      },
-      {
-        date: {
-          day: currentDate.getDate(),
-          month: currentDate.getMonth() + 1,
-          year: currentDate.getFullYear()
-        }
-      }
-    ]
+  private _createAt(): string {
+    const currentDate = Date.now()
+    return currentDate.toString()
+
   }
 }
